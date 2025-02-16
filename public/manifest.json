@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "Resume Job Matcher",
+  "version": "1.0",
+  "description": "Match your resume with job descriptions",
+  "permissions": ["activeTab", "storage"],
+  "host_permissions": ["*://*.linkedin.com/*"],
+  "action": {
+    "default_popup": "index.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.linkedin.com/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
